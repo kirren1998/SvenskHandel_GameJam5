@@ -12,8 +12,6 @@ public class CameraOrtographic : MonoBehaviour
     [SerializeField] private float yOffset = 5, zOffset = 5;
     private float _newZoom = 0;
 
-    private int shakeCounter;
-
     private void Awake()
     {
         _camera = GetComponent<Camera>();
