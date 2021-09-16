@@ -9,16 +9,16 @@ namespace Script.Items
         [SerializeField] private List<GameObject> spawnpointList;
         [SerializeField] private List<Package> packagePrefabList;
 
-        private void CreatePackage(int spawnpoint, int size, float distance)
+        private void CreatePackage(int spawnpoint, int id, int distanceIndex, int methodIndex)
         {
-            Instantiate(packagePrefabList[0], spawnpointList[spawnpoint].transform.position, Quaternion.identity).Initialize(distance, size);
+            Instantiate(packagePrefabList[0], spawnpointList[spawnpoint].transform.position, Quaternion.identity).Initialize( id, distanceIndex, methodIndex);
         }
 
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                CreatePackage(Random.Range(0, spawnpointList.Count), Random.Range(1, 4), 100);
+                CreatePackage(Random.Range(0, spawnpointList.Count), Random.Range(100, 1000), Random.Range(1, 4), Random.Range(1, 4));
             }
         }
     }

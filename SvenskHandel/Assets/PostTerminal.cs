@@ -36,7 +36,7 @@ public class PostTerminal : MonoBehaviour
    {
       if (other.CompareTag("Pickup"))
       {
-         m_Dd= other.GetComponent<Package>().GetDeliveryDistance();
+         //m_Dd= other.GetComponent<Package>().GetDeliveryDistance();
       }
    }
 }

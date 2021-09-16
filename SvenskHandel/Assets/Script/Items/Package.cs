@@ -2,43 +2,86 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public enum PackageFormat
+public enum PackageDistance
 {
-    Small, Medium, Large
+    Short, Medium, Long
+}
+
+public enum DeliveryMethod
+{
+    Normal, Express, Eco
 }
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(BoxCollider))]
-
 public class Package : MonoBehaviour
 {
-    [SerializeField] private float deliveryDistance;
-    public PackageFormat packageFormat;
+    [SerializeField] private int packageID;
+    [SerializeField] private float packageTimer;
+    
+    public PackageDistance packageDistance;
+    public DeliveryMethod deliveryMethod;
 
-    public void Initialize(float targetDistance, int packageSize)
+    // === PUBLIC METHODS === //
+    
+    public void Initialize(int id , int distance, int method)
     {
-        deliveryDistance = targetDistance;
+        packageID = id;
         
-        switch (packageSize)
+        switch (distance)
         {
             case 1:
-                packageFormat = PackageFormat.Small;
+                packageDistance = PackageDistance.Short;
                 break;
             case 2:
-                packageFormat = PackageFormat.Medium;
+                packageDistance = PackageDistance.Medium;
                 break;
             case 3:
-                packageFormat = PackageFormat.Large;
+                packageDistance = PackageDistance.Long;
                 break;
             default:
-                packageFormat = PackageFormat.Small;
+                packageDistance = PackageDistance.Short;
+                break;
+        }
+
+        switch (method)
+        {
+            case 1:
+                deliveryMethod = DeliveryMethod.Normal;
+                break;
+            case 2:
+                deliveryMethod = DeliveryMethod.Express;
+                break;
+            case 3:
+                deliveryMethod = DeliveryMethod.Eco;
+                break;
+            default:
+                deliveryMethod = DeliveryMethod.Normal;
                 break;
         }
     }
 
-    public float GetDeliveryDistance()
+    public void FixedUpdate()
     {
-        return deliveryDistance;
+        Timer();
+    }
+
+    private void Timer()
+    {
+        packageTimer -= Time.deltaTime;
+    }
+
+    // === ACCESSORS === //
+
+    public int GetPackageID()
+    {
+        return packageID;
+    }
+    
+    public float GetPackageTimer()
+    {
+        return packageTimer;
     }
 }
