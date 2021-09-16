@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 149781133}
   - component: {fileID: 149781132}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Text:Controlls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 205468192}
   - component: {fileID: 205468191}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: TutorialCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -779,7 +779,7 @@ GameObject:
   - component: {fileID: 1479481314}
   - component: {fileID: 1479481313}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Text:Wasd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -863,7 +863,7 @@ GameObject:
   - component: {fileID: 1608118939}
   - component: {fileID: 1608118938}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: StaminaCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1075,7 +1075,7 @@ GameObject:
   - component: {fileID: 1933189033}
   - component: {fileID: 1933189032}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: Text:Shift
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
