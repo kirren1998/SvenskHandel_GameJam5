@@ -94,7 +94,7 @@ namespace Script.Player
 
                 if (other.CompareTag("Terminal"))
                 {
-                    
+                    other.gameObject.GetComponent<PostTerminal>().DeliverPackage();
                 }
             }
         }
