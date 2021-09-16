@@ -3,18 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PackageFormat
+{
+    Small, Medium, Large
+}
+
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(BoxCollider))]
 
 public class Package : MonoBehaviour
 {
     [SerializeField] private float deliveryDistance;
-    [SerializeField] private PackageFormat packageFormat;
-
-    enum PackageFormat
-    {
-        Small, Medium, Large
-    }
+    public PackageFormat packageFormat;
 
     public void Initialize(float targetDistance, int packageSize)
     {
