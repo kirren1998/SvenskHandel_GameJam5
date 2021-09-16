@@ -36,4 +36,9 @@ public class Package : MonoBehaviour
                 break;
         }
     }
+
+    public float GetDeliveryDistance()
+    {
+        return deliveryDistance;
+    }
 }
