@@ -5,24 +5,47 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-
     [Header("MovementSettings")]
-    [SerializeField] [Range(0.1f,10)] private float movementSpeed;
-    [SerializeField] [Range(1.1f, 5f)] private float sprintMultiplier;
-    [SerializeField] [Range(0.1f, 10)] private float turnRate;
+    [Tooltip("Will determine how fast the player will move while walking")]
+    [SerializeField] [Range(1f, 10f)] private float movementSpeed;
+    [Tooltip("How much faster you will move while running(also applies to turnRate)")]
+    [SerializeField] [Range(1.5f, 5f)] private float sprintMultiplier;
+    [Tooltip("Determines how fast the character will turn and change direction")]
+    [SerializeField] [Range(1f, 10f)] private float turnRate;
+
+    [Header("BoxContollChanges")]
+    [Tooltip("Determines the amount (in percent) the player will loose controll over his movement when picking up packages over the limit")]
+    [SerializeField] [Range(0f, 100f)] private int lossOfControllPercent;
+    [Tooltip("How many boxes the player can hold before starting to loose controll")]
+    [SerializeField] [Range(1f, 10f)] private int maxHeldBoxes;
+    [Tooltip("How many boxes the player is holding")]
+    [SerializeField] [Range(1f, 10f)] private int currentHeldBoxes;
 
     [Header("StaminaSettings")]
-    [SerializeField] [Range(0.1f, 10)] private float staminaGainRate;
-    [SerializeField] [Range(0.1f, 50)] private float staminaUseRate;
-    [SerializeField] [Range(0.1f, 10)] private float afterSprintCooldown;
-    [SerializeField] private float stamina = 100f;
-
-    [Header("OtherStuff")]
+    [Tooltip("How many point of stamina you will restore each second while not running")]
+    [SerializeField] [Range(0.1f, 10f)] private float staminaGainRate;
+    [Tooltip("How many point of stamina you will use each second while running")]
+    [SerializeField] [Range(0.1f, 50f)] private float staminaUseRate;
+    [Tooltip("How many long the user have to wait before running again")]
+    [SerializeField] [Range(0.1f, 10f)] private float afterSprintCooldown;
+    [Tooltip("How many long after the stamina becomes full for the bar to become invisible")]
+    [SerializeField] [Range(0.1f, 1f)] private float hideStaminaBarDelay = .5f;
+    [Tooltip("The maximum amount of stamina the user has")]
+    [SerializeField] private float maxStamina = 100f;
+    [Tooltip("The reference to the slider that shows the player the stamina level")]
     [SerializeField] private Slider staminaMeter;
 
-    [Header("Info(don't touch)")]
+    //[Header("OtherStuff")]
+
+    [Header("Info(don't touch, only for show)")]
+    [Tooltip("The amount of stamina the user has currently")]
+    [SerializeField] private float stamina = 100f;
+    [Tooltip("Wether the player is running currently")]
     [SerializeField] private bool isRunning = false;
+    [Tooltip("Wether the player can run")]
     [SerializeField] private bool canRun = true;
+    [Tooltip("How long time the bar has to be full before it goes invisible")]
+    [SerializeField] private float hideStaminaBarTimer = 0;
     private Vector2 currentDirection;
     private float horizontal, vertical;
     void Update()
@@ -30,12 +53,24 @@ public class PlayerController : MonoBehaviour
         Sprint();
         Movement();
         UpdateInfo();
+        LookDirection();
+        if (stamina == 100)
+        {
+            hideStaminaBarTimer += Time.deltaTime;
+            staminaMeter.gameObject.SetActive(hideStaminaBarTimer <= hideStaminaBarDelay);
+        }
+        else
+        {
+            staminaMeter.gameObject.SetActive(true);
+            hideStaminaBarTimer = 0;
+        }
     }
 
     private void Movement()
     {
-        float movementStrenght = Time.deltaTime * movementSpeed * (isRunning? sprintMultiplier : 1f);
-        float turnStrenght = Time.deltaTime * turnRate * (isRunning? sprintMultiplier : 1f);
+        float currentLoss = 1 - currentHeldBoxes > maxHeldBoxes ? (currentHeldBoxes - maxHeldBoxes) * lossOfControllPercent : 0;
+        float movementStrenght = Time.deltaTime * movementSpeed * (isRunning? sprintMultiplier : 1f) * currentLoss;
+        float turnStrenght = Time.deltaTime * turnRate * (isRunning? sprintMultiplier : 1f) * currentLoss;
 
         horizontal = Mathf.Lerp(horizontal, Input.GetAxis("Horizontal") * movementStrenght, turnStrenght);
 
@@ -47,7 +82,6 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.LeftShift) && canRun)//Checks if you have been running and stopped, to give you a cooldown 
         {
-            Debug.Log("Woops, can't sprint, dont spam this ;P");
             canRun = false;
             isRunning = false;
             StartCoroutine(CantSprint());
@@ -74,7 +108,7 @@ public class PlayerController : MonoBehaviour
     }
     private void UpdateInfo()
     {
-        staminaMeter.value = stamina / 100;
+        staminaMeter.value = stamina / maxStamina;
     }
     private IEnumerator CantSprint()
     {
@@ -92,6 +126,5 @@ public class PlayerController : MonoBehaviour
             Debug.DrawRay(transform.position, currentDirection * 100, Color.red);
             Debug.Log("stuffs happening");
         }
-
     }
 }
