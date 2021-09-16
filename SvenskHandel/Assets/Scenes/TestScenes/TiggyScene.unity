@@ -585,6 +585,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8770791192758563756, guid: 00ecccaa1a54b4b4eb4a63ede34032e5, type: 3}
+      propertyPath: packageID
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8770791192758563756, guid: 00ecccaa1a54b4b4eb4a63ede34032e5, type: 3}
+      propertyPath: deliveryDistance
+      value: 17795
+      objectReference: {fileID: 0}
     - target: {fileID: 8770791192758563759, guid: 00ecccaa1a54b4b4eb4a63ede34032e5, type: 3}
       propertyPath: m_Name
       value: Package

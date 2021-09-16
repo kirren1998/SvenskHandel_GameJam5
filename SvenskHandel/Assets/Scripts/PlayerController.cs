@@ -18,8 +18,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] [Range(0f, 100f)] private int lossOfControllPercent;
     [Tooltip("How many boxes the player can hold before starting to loose controll")]
     [SerializeField] [Range(1f, 10f)] private int maxHeldBoxes;
-    [Tooltip("How many boxes the player is holding")]
-    [SerializeField] [Range(1f, 10f)] private int currentHeldBoxes;
 
     [Header("StaminaSettings")]
     [Tooltip("How many point of stamina you will restore each second while not running")]
@@ -29,15 +27,17 @@ public class PlayerController : MonoBehaviour
     [Tooltip("How many long the user have to wait before running again")]
     [SerializeField] [Range(0.1f, 10f)] private float afterSprintCooldown;
     [Tooltip("How many long after the stamina becomes full for the bar to become invisible")]
-    [SerializeField] [Range(0.1f, 1f)] private float hideStaminaBarDelay = .5f;
+    [SerializeField] [Range(0.1f, 10f)] private float hideStaminaBarDelay = .5f;
     [Tooltip("The maximum amount of stamina the user has")]
     [SerializeField] private float maxStamina = 100f;
     [Tooltip("The reference to the slider that shows the player the stamina level")]
-    [SerializeField] private Slider staminaMeter;
+    [SerializeField] private Image staminaMeter;
 
     //[Header("OtherStuff")]
 
     [Header("Info(don't touch, only for show)")]
+    [Tooltip("How many boxes the player is holding")]
+    [SerializeField] private int currentHeldBoxes;
     [Tooltip("The amount of stamina the user has currently")]
     [SerializeField] private float stamina = 100f;
     [Tooltip("Wether the player is running currently")]
@@ -46,7 +46,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool canRun = true;
     [Tooltip("How long time the bar has to be full before it goes invisible")]
     [SerializeField] private float hideStaminaBarTimer = 0;
-    private Vector2 currentDirection;
+
+    //stuff that you can't see
+    private Vector3 currentDirection;
     private float horizontal, vertical;
     void Update()
     {
@@ -54,21 +56,14 @@ public class PlayerController : MonoBehaviour
         Movement();
         UpdateInfo();
         LookDirection();
-        if (stamina == 100)
-        {
-            hideStaminaBarTimer += Time.deltaTime;
-            staminaMeter.gameObject.SetActive(hideStaminaBarTimer <= hideStaminaBarDelay);
-        }
-        else
-        {
-            staminaMeter.gameObject.SetActive(true);
-            hideStaminaBarTimer = 0;
-        }
+        StaminaBarInfo();
     }
 
     private void Movement()
     {
-        float currentLoss = 1 - currentHeldBoxes > maxHeldBoxes ? (currentHeldBoxes - maxHeldBoxes) * lossOfControllPercent : 0;
+        // how much controll you are loosing for handeling to many boxes
+        float currentLoss = 1 - (currentHeldBoxes > maxHeldBoxes ? (currentHeldBoxes - maxHeldBoxes) * lossOfControllPercent : 0);
+
         float movementStrenght = Time.deltaTime * movementSpeed * (isRunning? sprintMultiplier : 1f) * currentLoss;
         float turnStrenght = Time.deltaTime * turnRate * (isRunning? sprintMultiplier : 1f) * currentLoss;
 
@@ -84,6 +79,7 @@ public class PlayerController : MonoBehaviour
         {
             canRun = false;
             isRunning = false;
+            //staminaMeter.color = Color.red;
             StartCoroutine(CantSprint());
             return;
         }
@@ -103,12 +99,14 @@ public class PlayerController : MonoBehaviour
         {
             isRunning = false;
             canRun = false;
+            //staminaMeter.color = Color.red;
             StartCoroutine(CantSprint());
         } 
     }
     private void UpdateInfo()
     {
-        staminaMeter.value = stamina / maxStamina;
+        staminaMeter.fillAmount = stamina / maxStamina;
+        staminaMeter.color = canRun? new Color(1 - stamina / maxStamina, 0, stamina / maxStamina) : Color.red;
     }
     private IEnumerator CantSprint()
     {
@@ -119,12 +117,26 @@ public class PlayerController : MonoBehaviour
 
     private void LookDirection()
     {
-        currentDirection = new Vector2(horizontal, vertical).normalized;
+        currentDirection = new Vector3(horizontal, 0, vertical).normalized;
 
-        if (currentDirection != Vector2.zero)
+        if (currentDirection != Vector3.zero)
         {
             Debug.DrawRay(transform.position, currentDirection * 100, Color.red);
             Debug.Log("stuffs happening");
+        }
+    }
+    private void StaminaBarInfo()
+    {
+        if (stamina == 100)
+        {
+            hideStaminaBarTimer = Mathf.Clamp(hideStaminaBarTimer += Time.deltaTime, 0, hideStaminaBarDelay);
+            staminaMeter.gameObject.SetActive(hideStaminaBarTimer < hideStaminaBarDelay);
+            Debug.Log(hideStaminaBarTimer < hideStaminaBarDelay);
+        }
+        else
+        {
+            staminaMeter.gameObject.SetActive(true);
+            hideStaminaBarTimer = 0;
         }
     }
 }
