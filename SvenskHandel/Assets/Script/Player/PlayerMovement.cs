@@ -84,10 +84,17 @@ namespace Script.Player
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("Collision");
-                if (other.gameObject.GetComponent<Pickup>() != null)
+                if (other.CompareTag("Pickup"))
                 {
-                    other.gameObject.GetComponent<Pickup>().PickupCheck(PickupDest, dropDest);
+                    if (other.gameObject.GetComponent<Pickup>() != null)
+                    {
+                        other.gameObject.GetComponent<Pickup>().PickupCheck(PickupDest, dropDest);
+                    }
+                }
+
+                if (other.CompareTag("Terminal"))
+                {
+                    
                 }
             }
         }

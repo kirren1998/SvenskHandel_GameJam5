@@ -1,39 +1,39 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(BoxCollider))]
-
-public class Package : MonoBehaviour
+namespace Script.Items
 {
-    [SerializeField] private float deliveryDistance;
-    [SerializeField] private PackageFormat packageFormat;
+    [RequireComponent(typeof(Rigidbody))]
+    [RequireComponent(typeof(BoxCollider))]
 
-    enum PackageFormat
+    public class Package : MonoBehaviour
     {
-        Small, Medium, Large
-    }
+        [SerializeField] private float deliveryDistance;
+        [SerializeField] private PackageFormat packageFormat;
 
-    public void Initialize(float targetDistance, int packageSize)
-    {
-        deliveryDistance = targetDistance;
-        
-        switch (packageSize)
+        enum PackageFormat
         {
-            case 1:
-                packageFormat = PackageFormat.Small;
-                break;
-            case 2:
-                packageFormat = PackageFormat.Medium;
-                break;
-            case 3:
-                packageFormat = PackageFormat.Large;
-                break;
-            default:
-                packageFormat = PackageFormat.Small;
-                break;
+            Small, Medium, Large
+        }
+
+        public void Initialize(float targetDistance, int packageSize)
+        {
+            deliveryDistance = targetDistance;
+        
+            switch (packageSize)
+            {
+                case 1:
+                    packageFormat = PackageFormat.Small;
+                    break;
+                case 2:
+                    packageFormat = PackageFormat.Medium;
+                    break;
+                case 3:
+                    packageFormat = PackageFormat.Large;
+                    break;
+                default:
+                    packageFormat = PackageFormat.Small;
+                    break;
+            }
         }
     }
 }
