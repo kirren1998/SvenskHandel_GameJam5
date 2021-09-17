@@ -16,12 +16,16 @@ namespace Script.Items
         private void CreatePackage(int spawnpoint, int id, int distanceIndex, int methodIndex)
         {
             Package pack;
-            pack = Instantiate(packagePrefabList[0], spawnpointList[spawnpoint].transform.position, Quaternion.identity);
+            pack = Instantiate(packagePrefabList[0], spawnpointList[spawnpoint].transform.position, spawnpointList[spawnpoint].transform.rotation);
             pack.Initialize(id, distanceIndex, methodIndex);
             packagesSpawned.Add(pack);
         }
         private void Start()
         {
+            foreach(GameObject spawnPoint in spawnpointList)
+            {
+                spawnPoint.SetActive(false);
+            }
             GameManager.instance.GivePoints(100f);
             StartCoroutine(SpawnPackages());
         }
