@@ -4980,18 +4980,22 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7407429078343195791, guid: 16c22d3417a148f49a37db1e5633383a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7407429078343195791, guid: 16c22d3417a148f49a37db1e5633383a, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7407429078343195791, guid: 16c22d3417a148f49a37db1e5633383a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7407429078343195791, guid: 16c22d3417a148f49a37db1e5633383a, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7407429078610223575, guid: 16c22d3417a148f49a37db1e5633383a, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7407429078946634803, guid: 16c22d3417a148f49a37db1e5633383a, type: 3}
@@ -5084,15 +5088,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7407429078989394099, guid: 16c22d3417a148f49a37db1e5633383a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7407429078989394099, guid: 16c22d3417a148f49a37db1e5633383a, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7407429078989394099, guid: 16c22d3417a148f49a37db1e5633383a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16c22d3417a148f49a37db1e5633383a, type: 3}
@@ -8242,7 +8246,7 @@ PrefabInstance:
       objectReference: {fileID: 614536899}
     - target: {fileID: 815803585957435137, guid: 746e9b98dafff914b98e7b29e7ed328f, type: 3}
       propertyPath: timeOnTimer
-      value: 5
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 815803585957435138, guid: 746e9b98dafff914b98e7b29e7ed328f, type: 3}
       propertyPath: m_RootOrder
