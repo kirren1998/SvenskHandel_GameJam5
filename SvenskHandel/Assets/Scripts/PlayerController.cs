@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
     #region AnimationSettings
     [Header("AnimationSettings")]
     private float animationSpeed;
-    private Animator workerAnimator => GetComponent<Animator>();
+    private Animator workerAnimator => GetComponentInChildren<Animator>();
     //[Tooltip("The animator that is connected to the worker")]
     #endregion
 

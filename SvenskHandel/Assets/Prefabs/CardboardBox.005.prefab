@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 3358349981409139033}
   - component: {fileID: 6471237329408342620}
   - component: {fileID: 5783290505139058002}
+  - component: {fileID: 5635939399149212325}
   m_Layer: 0
   m_Name: CardboardBox.005
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,6 +132,18 @@ MonoBehaviour:
   packageTimer: 0
   packageDistance: 0
   deliveryMethod: 0
+--- !u!114 &5635939399149212325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954550486216892840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1450fe6ed2984346a106a66150cb118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3621599448333200467
 GameObject:
   m_ObjectHideFlags: 0
