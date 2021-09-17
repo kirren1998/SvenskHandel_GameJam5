@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public enum PackageDistance
 {
@@ -20,9 +21,12 @@ public class Package : MonoBehaviour
 {
     [SerializeField] private string packageID;
     [SerializeField] private float packageTimer;
+    private float maxTime;
     
     public PackageDistance packageDistance;
     public DeliveryMethod deliveryMethod;
+    
+    private Image myTimerImage;
 
     // === PUBLIC METHODS === //
     
@@ -70,6 +74,8 @@ public class Package : MonoBehaviour
         {
             packageTimer = 180;
         }
+
+        maxTime = packageTimer;
     }
 
     public void UpdateMe()
@@ -81,13 +87,18 @@ public class Package : MonoBehaviour
     {
         if (packageTimer > 0)
         {
+            float percentTimeLeft = packageTimer / maxTime;
+            
             packageTimer -= Time.deltaTime;
+            GetComponent<MeshRenderer>().material.color = new Color(1 - percentTimeLeft, percentTimeLeft, 0);
         }
         else
         {
             packageTimer = 0;
         }
     }
+    
+    
 
     // === ACCESSORS === //
 
