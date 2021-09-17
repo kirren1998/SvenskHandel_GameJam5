@@ -69,6 +69,7 @@ namespace Script.Items
 
             for (int i = 0; i < packagesSpawned.Count; i++)
             {
+                if(!packagesSpawned[i]) continue;
                 packagesSpawned[i].UpdateMe();
                 if (packagesSpawned[i].GetPackageTimer() <= 0)
                 {
