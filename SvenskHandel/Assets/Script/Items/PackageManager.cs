@@ -20,7 +20,6 @@ namespace Script.Items
             pack.Initialize(id, distanceIndex, methodIndex);
             packagesSpawned.Add(pack);
         }
-
         private void Start()
         {
             GameManager.instance.GivePoints(100f);
