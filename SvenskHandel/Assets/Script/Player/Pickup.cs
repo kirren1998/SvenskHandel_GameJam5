@@ -11,7 +11,7 @@ namespace Script.Player
             Debug.Log("Pick up");
             if (m_IsPickedUp)
             {
-                DropItem(dropDest);
+                Destroy(gameObject);
             }
             else
             {

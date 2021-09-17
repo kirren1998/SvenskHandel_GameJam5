@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Script.Player;
 using UnityEditor.Build.Content;
 using UnityEngine;
 
@@ -72,6 +73,7 @@ public class PostTerminal : MonoBehaviour
       if (other.CompareTag("Pickup"))
       {
          m_Package= other.GetComponent<Package>();
+         Destroy(other.gameObject);
       }
    }
 }
