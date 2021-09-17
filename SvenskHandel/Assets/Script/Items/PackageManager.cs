@@ -40,9 +40,24 @@ namespace Script.Items
 
         private void UpdatePackages()
         {
-            foreach (var pack in packagesSpawned)
+            /*foreach (var pack in packagesSpawned)
             {
                 pack.UpdateMe();
+                if (pack.GetPackageTimer() <= 0)
+                {
+                    Destroy(pack.gameObject);
+                    packagesSpawned.Remove(pack);
+                }
+            }*/
+
+            for (int i = 0; i < packagesSpawned.Count; i++)
+            {
+                packagesSpawned[i].UpdateMe();
+                if (packagesSpawned[i].GetPackageTimer() <= 0)
+                {
+                    Destroy(packagesSpawned[i].gameObject);
+                    packagesSpawned.RemoveAt(i);
+                }
             }
         }
     }
