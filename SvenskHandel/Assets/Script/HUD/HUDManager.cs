@@ -12,7 +12,8 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI pointsTextDisplay;
     [SerializeField] private GameObject listObject;
     private bool listActive;
-    
+
+    [SerializeField] private GameObject EndScreen;
     // === PRIVATE METHODS === //
     
     private void Update()
@@ -47,11 +48,18 @@ public class HUDManager : MonoBehaviour
         }
         else
         {
-            
+            EndGame();
             levelTime = 0;
         }
 
         timerTextDisplay.text = Mathf.RoundToInt(levelTime).ToString();
+    }
+
+    private void EndGame()
+    {
+       EndScreen.SetActive(true);
+       Time.timeScale = 0;
+       gameObject.SetActive(false);
     }
 
     private void UpdatePoints()
