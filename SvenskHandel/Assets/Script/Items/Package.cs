@@ -63,7 +63,7 @@ public class Package : MonoBehaviour
         }
     }
 
-    public void FixedUpdate()
+    public void UpdateMe()
     {
         Timer();
     }
