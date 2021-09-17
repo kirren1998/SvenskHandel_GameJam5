@@ -462,6 +462,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
+    - target: {fileID: 7660086863947819363, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &105221717 stripped
@@ -726,6 +734,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7660086863947819363, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &161703565 stripped
@@ -999,6 +1011,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
+    - target: {fileID: 7660086863947819363, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &198242204 stripped
@@ -1073,6 +1093,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &216308721 stripped
@@ -1147,6 +1171,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &220443509 stripped
@@ -1317,6 +1345,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve
       objectReference: {fileID: 0}
+    - target: {fileID: 7660086863947819363, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &243787059 stripped
@@ -1721,7 +1753,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
+  - {fileID: 2100000, guid: dc1503b09bd51a043bd88a9754357898, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1913,6 +1945,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &375228992 stripped
@@ -2182,6 +2218,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
+    - target: {fileID: 7660086863947819363, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &437031046 stripped
@@ -2380,6 +2424,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &462021339 stripped
@@ -2454,6 +2502,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7660086863947819363, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &472428926 stripped
@@ -2528,6 +2580,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
+    - target: {fileID: 7660086863947819363, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &483379052 stripped
@@ -3219,6 +3279,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &605893459 stripped
@@ -3674,6 +3738,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &713552447 stripped
@@ -4063,6 +4131,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
+    - target: {fileID: 7660086863947819363, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &826067331 stripped
@@ -4499,6 +4575,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &936564599 stripped
@@ -4773,6 +4853,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
+    - target: {fileID: 7660086863947819363, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &1006231897 stripped
@@ -5119,6 +5207,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
+    - target: {fileID: 7660086863947819363, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &1074737097 stripped
@@ -5911,6 +6007,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &1204208789 stripped
@@ -6348,6 +6448,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &1317902541 stripped
@@ -6500,6 +6604,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
+    - target: {fileID: 7660086863947819363, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &1330971689 stripped
@@ -7136,6 +7248,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &1425580262 stripped
@@ -7210,6 +7326,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
+    - target: {fileID: 7660086863947819363, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &1434890691 stripped
@@ -7513,6 +7637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &1518724970 stripped
@@ -7620,6 +7748,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &1558101068 stripped
@@ -7823,6 +7955,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &1607132727 stripped
@@ -8746,6 +8882,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
+    - target: {fileID: 7660086863947819363, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &1778928697 stripped
@@ -9683,6 +9827,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
+    - target: {fileID: 7660086863947819363, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &1966954651 stripped
@@ -10007,6 +10159,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &2003952041 stripped
@@ -10790,6 +10946,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
+    - target: {fileID: 7660086863947819363, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &2124146031 stripped
@@ -10864,6 +11028,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shelve (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6122602170842105148, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a206d9963ae65b8488fc04342afd7d3e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 860c90a0e94ef5544b837aaca339051b, type: 3}
 --- !u!4 &2124311685 stripped
