@@ -35,4 +35,9 @@ public class GameManager : MonoBehaviour
     {
         hudManager.AddToPoints(amtOfPoints);
     }
+
+    public float GetTimer()
+    {
+        return timeOnTimer;
+    }
 }

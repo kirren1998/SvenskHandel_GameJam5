@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f22d745b34f4e4fb31c36d4e1c3320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  packageID: 100
+  packageID: 
   packageTimer: 180
   packageDistance: 0
   deliveryMethod: 0
@@ -1083,6 +1083,7 @@ MonoBehaviour:
   packagePrefabList:
   - {fileID: 8770791192758563756, guid: 00ecccaa1a54b4b4eb4a63ede34032e5, type: 3}
   packagesSpawned: []
+  packageSpawnInterval: 1
 --- !u!4 &2081264865
 Transform:
   m_ObjectHideFlags: 0
