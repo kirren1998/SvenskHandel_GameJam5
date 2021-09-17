@@ -72,6 +72,7 @@ public class PostTerminal : MonoBehaviour
    {
       if (other.CompareTag("Pickup"))
       {
+         PlayerController.instance.PlayDropSound();
          m_Package= other.GetComponent<Package>();
          Destroy(other.gameObject);
       }

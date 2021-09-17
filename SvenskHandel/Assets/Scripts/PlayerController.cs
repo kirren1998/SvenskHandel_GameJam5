@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Script.Player;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
     #region MovementSettings
     [Header("MovementSettings")]
     [Tooltip("Will determine how fast the player will move while walking")]
@@ -47,6 +50,13 @@ public class PlayerController : MonoBehaviour
     //[Tooltip("The animator that is connected to the worker")]
     #endregion
 
+    #region SoundSettings
+    [Header("SoundSettings")]
+    public AudioClip[] PickupSounds;
+    public AudioClip[] DropSounds;
+    private AudioSource SFXSource => GetComponent<AudioSource>();
+    #endregion
+
     #region Info
     [Header("Info(don't touch, only for show)")]
     [Tooltip("How many boxes the player is holding")]
@@ -76,6 +86,13 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region DoneFunctions
+
+    void Awake()
+    {
+        instance = this;
+    }
+
+
     void Update()
     {
         Sprint();
@@ -220,6 +237,7 @@ public class PlayerController : MonoBehaviour
             {
                 if (other.gameObject.GetComponent<Pickup>() != null)
                 {
+                    PlayPickupSound();
                     other.gameObject.GetComponent<Pickup>().PickupCheck(PickupDest, dropDest);
                 }
             }
@@ -230,4 +248,15 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    public void PlayPickupSound()
+    {
+        if(PickupSounds != null && PickupSounds.Length > 0) SFXSource.PlayOneShot(PickupSounds[Random.Range(0, PickupSounds.Length)]);
+    }
+
+    public void PlayDropSound()
+    {
+        if(DropSounds != null && DropSounds.Length > 0) SFXSource.PlayOneShot(DropSounds[Random.Range(0, DropSounds.Length)]);
+    }
+
 }
