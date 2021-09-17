@@ -18,7 +18,7 @@ public enum DeliveryMethod
 [RequireComponent(typeof(BoxCollider))]
 public class Package : MonoBehaviour
 {
-    [SerializeField] private int packageID;
+    [SerializeField] private string packageID;
     [SerializeField] private float packageTimer;
     
     public PackageDistance packageDistance;
@@ -26,9 +26,9 @@ public class Package : MonoBehaviour
 
     // === PUBLIC METHODS === //
     
-    public void Initialize(int id , int distance, int method)
+    public void Initialize(int id, int distance, int method)
     {
-        packageID = id;
+        packageID = id.ToString();
         
         switch (distance)
         {
@@ -61,6 +61,15 @@ public class Package : MonoBehaviour
                 deliveryMethod = DeliveryMethod.Normal;
                 break;
         }
+
+        if (deliveryMethod == DeliveryMethod.Express)
+        {
+            packageTimer = 60f;
+        }
+        else
+        {
+            packageTimer = 180;
+        }
     }
 
     public void UpdateMe()
@@ -70,12 +79,19 @@ public class Package : MonoBehaviour
 
     private void Timer()
     {
-        packageTimer -= Time.deltaTime;
+        if (packageTimer > 0)
+        {
+            packageTimer -= Time.deltaTime;
+        }
+        else
+        {
+            packageTimer = 0;
+        }
     }
 
     // === ACCESSORS === //
 
-    public int GetPackageID()
+    public string GetPackageID()
     {
         return packageID;
     }
