@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Script.Player;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -67,6 +68,13 @@ public class PlayerController : MonoBehaviour
     private float horizontal, vertical;
     #endregion
 
+    #region Visible Variables
+
+    public Transform PickupDest;
+    public Transform dropDest;
+
+    #endregion
+
     #region DoneFunctions
     void Update()
     {
@@ -103,14 +111,14 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     private void Sprint()
     {
-        if (Input.GetKeyUp(KeyCode.LeftShift) && canRun)//Checks if you have been running and stopped, to give you a cooldown 
-        {
-            canRun = false;
-            isRunning = false;
-            //staminaMeter.color = Color.red;
-            StartCoroutine(CantSprint());
-            return;
-        }
+        // if (Input.GetKeyUp(KeyCode.LeftShift) && canRun)//Checks if you have been running and stopped, to give you a cooldown 
+        // {
+        //     canRun = false;
+        //     isRunning = false;
+        //     //staminaMeter.color = Color.red;
+        //     StartCoroutine(CantSprint());
+        //     return;
+        // }
         if (!Input.GetKey(KeyCode.LeftShift) || !canRun)//checks if you can and are trying to run
         {
             stamina = Mathf.Clamp(stamina += Time.deltaTime * staminaGainRate, 0, 100);
@@ -202,5 +210,24 @@ public class PlayerController : MonoBehaviour
     {
         workerAnimator.SetFloat("AnimationSpeed", Mathf.Abs(vertical) + Mathf.Abs(horizontal));
         workerAnimator.speed = (Mathf.Abs(vertical) + Mathf.Abs(horizontal) * 100) + 1;
+    }
+    //Check if a package is close
+    private void OnTriggerStay(Collider other)
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (other.CompareTag("Pickup"))
+            {
+                if (other.gameObject.GetComponent<Pickup>() != null)
+                {
+                    other.gameObject.GetComponent<Pickup>().PickupCheck(PickupDest, dropDest);
+                }
+            }
+
+            if (other.CompareTag("Terminal"))
+            {
+                other.gameObject.GetComponent<PostTerminal>().DeliverPackage();
+            }
+        }
     }
 }

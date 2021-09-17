@@ -80,23 +80,23 @@ namespace Script.Player
         }
 
         //Check if a package is close
-        private void OnTriggerStay(Collider other)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                if (other.CompareTag("Pickup"))
-                {
-                    if (other.gameObject.GetComponent<Pickup>() != null)
-                    {
-                        other.gameObject.GetComponent<Pickup>().PickupCheck(PickupDest, dropDest);
-                    }
-                }
-
-                if (other.CompareTag("Terminal"))
-                {
-                    other.gameObject.GetComponent<PostTerminal>().DeliverPackage();
-                }
-            }
-        }
+              private void OnTriggerStay(Collider other)
+              {
+                  if (Input.GetKeyDown(KeyCode.F))
+                  {
+                      if (other.CompareTag("Pickup"))
+                      {
+                          if (other.gameObject.GetComponent<Pickup>() != null)
+                          {
+                              other.gameObject.GetComponent<Pickup>().PickupCheck(PickupDest, dropDest);
+                          }
+                      }
+      
+                      if (other.CompareTag("Terminal"))
+                      {
+                          other.gameObject.GetComponent<PostTerminal>().DeliverPackage();
+                      }
+                  }
+              }
     }
 }

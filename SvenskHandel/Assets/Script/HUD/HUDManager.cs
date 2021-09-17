@@ -10,7 +10,8 @@ public class HUDManager : MonoBehaviour
     private float playerPoints;
     [SerializeField] private TextMeshProUGUI timerTextDisplay;
     [SerializeField] private TextMeshProUGUI pointsTextDisplay;
-
+    [SerializeField] private GameObject listObject;
+    private bool listActive;
     
     // === PRIVATE METHODS === //
     
@@ -18,6 +19,24 @@ public class HUDManager : MonoBehaviour
     {
         UpdatePoints();
         UpdateTimer();
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            CheckList();
+        }
+    }
+
+    private void CheckList()
+    {
+        if (listActive)
+        {
+            listObject.SetActive(false);
+            listActive = false;
+        }
+        else
+        {
+            listObject.SetActive(true);
+            listActive = true;
+        }
     }
 
     private void UpdateTimer()
@@ -28,6 +47,7 @@ public class HUDManager : MonoBehaviour
         }
         else
         {
+            
             levelTime = 0;
         }
 
